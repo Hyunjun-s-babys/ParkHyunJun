@@ -1,0 +1,21 @@
+    public int solution(int[] stuffs) {
+        
+        int answer = 0;
+
+        int smallCounter = 0;
+        int generalCounter = 0;
+
+        for(int i = 0; i < stuffs.length; i++) {
+            if(stuffs[i] > 3)
+                generalCounter += stuffs[i];
+            else
+                smallCounter += stuffs[i];
+        }
+
+        if(smallCounter > generalCounter)
+            answer = smallCounter;
+        else
+            answer = generalCounter;
+        
+        return answer;
+    }
