@@ -1,0 +1,7 @@
+ public int solution(int[] timeTable) {
+        int answer = 0;
+        int firstClass = func_c(timeTable);
+        int lastClass = func_a(timeTable);
+        answer = func_b(timeTable,firstClass,lastClass);
+        return answer;
+    }
