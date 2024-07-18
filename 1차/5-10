@@ -1,0 +1,19 @@
+    public int solution(int[] timeTable, int n) {
+        
+        int answer = 0;
+			  int [] temp = new int [n];
+			  for(int i=0; i<timeTable.length; i++){
+					if(i<n){
+						temp[i]=timeTable[i];
+					}
+					else{
+						temp[i-n]+=timeTable[i];
+					}
+				}
+				for(int i=0; i<temp.length; i++){
+					if(answer<temp[i]){
+						answer = temp[i];
+					}
+				}
+        return answer;
+    }
